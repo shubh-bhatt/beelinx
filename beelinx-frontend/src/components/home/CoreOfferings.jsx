@@ -1,4 +1,4 @@
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { Banknote, Smartphone, ShieldCheck, BarChart3 } from "lucide-react";
 
 const CoreOfferings = () => {
@@ -61,7 +61,8 @@ const CoreOfferings = () => {
               whileInView="visible"
               viewport={{ once: false }}
               custom={index}
-              whileHover={{ y: -10, scale: 1.05 }}>
+              whileHover={{ y: -10, scale: 1.05 }}
+            >
               <div className="flex justify-center mb-4">{item.icon}</div>
               <h3 className="text-xl font-semibold mb-2 text-gray-800">
                 {item.title}
@@ -71,7 +72,8 @@ const CoreOfferings = () => {
               <motion.div
                 className="absolute inset-0 bg-white bg-opacity-95 rounded-2xl flex flex-col items-center justify-center px-6 text-gray-700 text-sm opacity-0 group-hover:opacity-100 transition-all duration-500"
                 initial={{ scale: 0.9 }}
-                whileHover={{ scale: 1 }}>
+                whileHover={{ scale: 1 }}
+              >
                 <p className="text-base">{item.detail}</p>
               </motion.div>
             </motion.div>
