@@ -3,7 +3,7 @@ import React from "react";
 const PartnerHero = () => {
   return (
     <div>
-      <section className="bg-linear-to-br from-emerald-50 via-white to-sky-50 py-20 px-6">
+      <section className="bg-linear-to-br from-emerald-50 via-white to-sky-50 mt-32 py-10 px-6">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl font-bold text-gray-900 mb-4">
             Trusted by Leading Banks, Gateways, and Institutions
