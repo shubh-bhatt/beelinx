@@ -175,6 +175,15 @@ export default function Footer() {
                   Compliance & Audit
                 </Link>
               </li>
+
+              <li>
+                <Link
+                  to="/legal-and-compliance"
+                  className="text-gray-600 hover:text-sky-600 transition-colors duration-200"
+                >
+                  Legal & Compliance
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -320,7 +329,7 @@ export default function Footer() {
               </p>
               <p className="flex items-start gap-3 text-gray-600">
                 <MapPin className="w-5 h-5 text-sky-500 mt-0.5" />
-                Greater Noida, Uttar Pradesh, India
+                Noida, Uttar Pradesh, India
               </p>
             </div>
             <div className="flex gap-3">
