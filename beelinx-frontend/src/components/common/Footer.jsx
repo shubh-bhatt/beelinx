@@ -175,6 +175,15 @@ export default function Footer() {
                   Compliance & Audit
                 </Link>
               </li>
+
+              <li>
+                <Link
+                  to="/legal-and-compliance"
+                  className="text-gray-600 hover:text-sky-600 transition-colors duration-200"
+                >
+                  Legal & Compliance
+                </Link>
+              </li>
             </ul>
           </div>
 
