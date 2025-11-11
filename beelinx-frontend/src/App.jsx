@@ -27,6 +27,7 @@ import CookiePolicy from "./pages/CookiePolicy";
 import SLA from "./pages/SLA";
 import SecurityAndCompliance from "./pages/SecurityAndCompliance";
 import Partners_association from "./pages/Partners_association";
+import LegalAndCompliance from "./pages/LegalAndCompliance";
 
 function App() {
   return (
@@ -69,6 +70,11 @@ function App() {
             <Route
               path="/security-compliance"
               element={<SecurityAndCompliance />}
+            />
+
+            <Route
+              path="/legal-and-compliance"
+              element={<LegalAndCompliance />}
             />
 
             {/* Redirect unknown routes */}
