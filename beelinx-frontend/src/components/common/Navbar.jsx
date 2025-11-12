@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import { Link, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom"; // ✅ use NavLink instead of Link
 import beelinxLogo from "/logo.jpg";
 import ProductMegaMenu from "./MegaMenu/ProductMegaMenu";
 import ServicesMegaMenu from "./MegaMenu/ServiceMegaMenu";
@@ -8,7 +8,7 @@ import SolutionsMegaMenu from "./MegaMenu/SolutionMegaMenu";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [showMegaMenu, setShowMegaMenu] = useState(null); // null | "products" | "services" | "solutions"
+  const [showMegaMenu, setShowMegaMenu] = useState(null);
   const navigate = useNavigate();
 
   const menuItems = [
@@ -30,7 +30,7 @@ const Navbar = () => {
           onClick={() => navigate("/")}
           className="flex items-center space-x-2 cursor-pointer"
         >
-          <img src={beelinxLogo} alt="Beelinx Logo" className="h-16 w-auto" />
+          <img src={beelinxLogo} alt="Beelinx Logo" className="h-12 w-30" />
         </div>
 
         {/* 🟢 Desktop Menu */}
@@ -47,12 +47,19 @@ const Navbar = () => {
                 else setShowMegaMenu(null);
               }}
             >
-              <Link
+              <NavLink
                 to={item.path}
-                className="hover:text-[#4CB4FB] transition-colors text-base"
+                className={({ isActive }) =>
+                  `relative transition-colors text-base duration-200 
+                  ${
+                    isActive
+                      ? "text-[#4CB4FB] after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-full after:h-0.5 after:bg-[#4CB4FB]"
+                      : "text-gray-700 hover:text-[#4CB4FB]"
+                  }`
+                }
               >
                 {item.name}
-              </Link>
+              </NavLink>
             </div>
           ))}
         </nav>
@@ -70,17 +77,14 @@ const Navbar = () => {
           {isOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
 
-        {/* 🧩 Mega Menus (hover-activated, stays open on submenu hover) */}
+        {/* 🧩 Mega Menus */}
         {showMegaMenu && (
           <div
             className="absolute top-full left-0 w-full flex justify-center pb-8 transition-all duration-300"
             onMouseEnter={() => setShowMegaMenu(showMegaMenu)}
             onMouseLeave={() => setShowMegaMenu(null)}
           >
-            <div
-              className="relative z-40 bg-white shadow-xl rounded-b-2xl border-t border-gray-100 
-              animate-slideDown"
-            >
+            <div className="relative z-40 bg-white shadow-xl rounded-b-2xl border-t border-gray-100 animate-slideDown">
               {showMegaMenu === "products" && <ProductMegaMenu />}
               {showMegaMenu === "services" && <ServicesMegaMenu />}
               {showMegaMenu === "solutions" && <SolutionsMegaMenu />}
@@ -94,14 +98,20 @@ const Navbar = () => {
         <div className="md:hidden bg-white shadow-md">
           <nav className="flex flex-col space-y-3 px-6 py-4">
             {menuItems.map((item) => (
-              <Link
+              <NavLink
                 key={item.name}
                 to={item.path}
-                className="text-gray-700 font-medium hover:text-[#4CB4FB] transition"
+                className={({ isActive }) =>
+                  `font-medium transition duration-200 ${
+                    isActive
+                      ? "text-[#4CB4FB] underline underline-offset-4"
+                      : "text-gray-700 hover:text-[#4CB4FB]"
+                  }`
+                }
                 onClick={() => setIsOpen(false)}
               >
                 {item.name}
-              </Link>
+              </NavLink>
             ))}
             <button className="bg-[#4CB4FB] text-white px-5 py-2 rounded-full font-semibold hover:bg-sky-500 transition">
               Request Demo

@@ -8,7 +8,7 @@ const HeroSection = () => {
         <motion.h1
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="text-4xl md:text-6xl font-bold mb-6"
         >
@@ -18,7 +18,7 @@ const HeroSection = () => {
         <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: true }}
           transition={{ delay: 0.4, duration: 0.8 }}
           className="text-lg md:text-2xl text-gray-200 max-w-4xl mx-auto mb-10"
         >
@@ -29,7 +29,7 @@ const HeroSection = () => {
         <motion.button
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: true }}
           transition={{ delay: 0.6, duration: 0.6 }}
           className="bg-white text-[#4CB4FB] font-semibold py-3 px-10 rounded-full transition-all  transform hover:-translate-y-2 duration-300 hover:scale-105 shadow-lg mr-5 cursor-pointer"
         >
@@ -39,7 +39,7 @@ const HeroSection = () => {
         <motion.button
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: true }}
           transition={{ delay: 0.6, duration: 0.6 }}
           className="bg-white text-[#4CB4FB] font-semibold py-3 px-10 rounded-full transition-all  transform hover:-translate-y-2 duration-300 hover:scale-105 shadow-lg cursor-pointer"
         >

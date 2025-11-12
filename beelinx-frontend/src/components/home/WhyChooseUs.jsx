@@ -37,6 +37,7 @@ const WhyChooseUs = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
         >
           Why Choose <span className="text-[#4CB4FB]">Beelinix?</span>
         </motion.h2>
@@ -46,9 +47,10 @@ const WhyChooseUs = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.1 }}
+          viewport={{ once: true }}
         >
-          Built for reliability, compliance, and speed — empowering businesses to handle financial
-          operations efficiently and securely.
+          Built for reliability, compliance, and speed — empowering businesses
+          to handle financial operations efficiently and securely.
         </motion.p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
@@ -60,9 +62,12 @@ const WhyChooseUs = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.15 }}
               whileHover={{ scale: 1.03 }}
+              viewport={{ once: true }} 
             >
               <div className="flex justify-center mb-4">{usp.icon}</div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">{usp.title}</h3>
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                {usp.title}
+              </h3>
               <p className="text-gray-600 text-sm">{usp.description}</p>
             </motion.div>
           ))}

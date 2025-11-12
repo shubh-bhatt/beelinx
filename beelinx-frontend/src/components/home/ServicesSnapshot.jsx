@@ -32,25 +32,30 @@ const ServicesSnapshot = () => {
   return (
     <section className="py-20 bg-gray-50" id="services-snapshot">
       <div className="max-w-7xl mx-auto px-6 text-center">
+        {/* Title Animation */}
         <motion.h2
           className="text-4xl font-bold text-gray-900 mb-4"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
+          viewport={{ once: true }} // ✅ Animate only once
         >
           Services <span className="text-[#4CB4FB]">Snapshot</span>
         </motion.h2>
 
+        {/* Subtitle Animation */}
         <motion.p
           className="text-gray-600 max-w-2xl mx-auto mb-12"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.1 }}
+          viewport={{ once: true }} // ✅ Animate only once
         >
-          A quick overview of our key service offerings that help you integrate, operate, and scale
-          confidently.
+          A quick overview of our key service offerings that help you integrate,
+          operate, and scale confidently.
         </motion.p>
 
+        {/* Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {services.map((service, index) => (
             <motion.div
@@ -60,9 +65,12 @@ const ServicesSnapshot = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.15 }}
               whileHover={{ scale: 1.03 }}
+              viewport={{ once: true }} // ✅ Animate once when visible
             >
               <div className="flex justify-center mb-4">{service.icon}</div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">{service.title}</h3>
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                {service.title}
+              </h3>
               <p className="text-gray-600 text-sm">{service.description}</p>
             </motion.div>
           ))}

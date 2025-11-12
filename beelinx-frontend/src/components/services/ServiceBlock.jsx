@@ -45,7 +45,7 @@ const DeepDiveServices = () => {
           initial={{ opacity: 0, y: -16 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: false, amount: 0.3 }}
+          viewport={{ once: true }}
           className="text-4xl font-bold text-gray-900 mb-6"
         >
           Deep-Dive Service Blocks
@@ -55,7 +55,7 @@ const DeepDiveServices = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.6 }}
-          viewport={{ once: false, amount: 0.3 }}
+          viewport={{ once: true }}
           className="text-gray-600 text-lg mb-16 max-w-3xl mx-auto"
         >
           A closer look into our specialized services designed to empower your
@@ -69,7 +69,7 @@ const DeepDiveServices = () => {
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.15, duration: 0.6 }}
-              viewport={{ once: false, amount: 0.3 }}
+              viewport={{ once: true }}
               className="bg-gray-50 p-10 rounded-2xl border border-gray-200 text-left shadow-lg hover:shadow-2xl transition-all"
             >
               <div className="flex flex-col items-start">
@@ -79,7 +79,7 @@ const DeepDiveServices = () => {
                 </h3>
                 <p className="text-gray-600 mb-4">{service.description}</p>
                 <p className="text-[#4CB4FB] font-medium mb-6">
-                   {service.benefit}
+                  {service.benefit}
                 </p>
                 <button className="bg-[#4CB4FB] text-white font-semibold py-2 px-6 rounded-lg hover:bg-[#4CB4FB] transition-all">
                   Request Service

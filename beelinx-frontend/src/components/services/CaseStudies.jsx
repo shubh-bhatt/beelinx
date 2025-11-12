@@ -21,7 +21,7 @@ const CaseStudies = () => {
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: true }}
           className="text-4xl font-bold text-gray-900 mb-12"
         >
           Case Studies & Testimonials
@@ -34,7 +34,7 @@ const CaseStudies = () => {
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.2, duration: 0.7 }}
-              viewport={{ once: false, amount: 0.2 }}
+              viewport={{ once: true }}
               className="bg-gray-50 border border-gray-200 rounded-2xl shadow-lg p-10 text-left hover:shadow-2xl transition-all"
             >
               <h3 className="text-2xl font-semibold text-gray-800 mb-3">

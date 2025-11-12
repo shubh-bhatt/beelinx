@@ -72,7 +72,7 @@ const ServiceCategories = () => {
         <motion.h2
           initial={{ opacity: 0, y: -16 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.7 }}
           className="text-4xl font-bold text-gray-900 mb-6"
         >
@@ -82,12 +82,12 @@ const ServiceCategories = () => {
         <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: true }}
           transition={{ delay: 0.2, duration: 0.7 }}
           className="text-gray-600 text-lg mb-16 max-w-3xl mx-auto"
         >
-          Explore our range of expert-led services designed to simplify integration,
-          ensure compliance, and support your growth.
+          Explore our range of expert-led services designed to simplify
+          integration, ensure compliance, and support your growth.
         </motion.p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -96,7 +96,7 @@ const ServiceCategories = () => {
               key={index}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false, amount: 0.2 }}
+              viewport={{ once: true }}
               transition={{ delay: index * 0.12, duration: 0.6 }}
               className="bg-white w-full shadow-lg rounded-2xl p-10 border border-gray-200 hover:shadow-2xl transition-all"
             >
