@@ -39,7 +39,7 @@ const HeroSection = () => {
         <motion.button
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
+          viewport={{ once: true }}   
           transition={{ delay: 0.6, duration: 0.6 }}
           className="bg-white text-[#4CB4FB] font-semibold py-3 px-10 rounded-full transition-all  transform hover:-translate-y-2 duration-300 hover:scale-105 shadow-lg cursor-pointer"
         >
