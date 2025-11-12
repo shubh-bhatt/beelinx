@@ -12,6 +12,7 @@ const ProductHero = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
             className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight"
           >
             Powerful <span className="text-[#4CB4FB]">APIs</span> to Build the
@@ -22,6 +23,7 @@ const ProductHero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.6 }}
+            viewport={{ once: true }}
             className="mt-4 text-lg text-gray-600 max-w-xl mx-auto md:mx-0"
           >
             Seamless, secure, and scalable APIs for payments, verification, and
@@ -35,6 +37,7 @@ const ProductHero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.6 }}
+            viewport={{ once: true }}
             className="mt-8 flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start"
           >
             <Link
@@ -58,6 +61,7 @@ const ProductHero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.7, duration: 0.7 }}
+          viewport={{ once: true }}
         >
           <img
             src={productHeroImage}

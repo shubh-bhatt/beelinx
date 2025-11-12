@@ -59,7 +59,7 @@ const CoreOfferings = () => {
               variants={cardVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: false }}
+              viewport={{ once: true }}
               custom={index}
               whileHover={{ y: -10, scale: 1.05 }}
             >

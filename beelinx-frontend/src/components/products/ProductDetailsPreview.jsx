@@ -20,7 +20,7 @@ const productDetails = [
     name: "PAN Verification",
     icon: <FaCheckCircle className="text-[#4CB4FB] text-3xl" />,
     description:
-      "Instantly validate PAN details for onboarding and KYC verification with our simple API.",
+      "Instantly validate PAN details for onboarding and KYC verification   with our simple and reliable API.",
     usp: ["Real-time checks", "High accuracy", "Secure data handling"],
   },
   {
@@ -40,14 +40,15 @@ const ProductDetailsPreview = () => {
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           className="text-4xl font-bold text-gray-900 mb-4"
         >
           Product Detail Previews
         </motion.h2>
 
         <p className="text-gray-600 mb-12">
-          Explore our powerful suite of APIs designed for secure, scalable, and compliant financial solutions.
+          Explore our powerful suite of APIs designed for secure, scalable, and
+          compliant financial solutions.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -56,15 +57,21 @@ const ProductDetailsPreview = () => {
               key={product.name}
               initial={{ opacity: 0, y: 40, scale: 0.95 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
-              transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
-              viewport={{ once: false, amount: 0.2 }}
+              transition={{
+                duration: 0.5,
+                delay: index * 0.1,
+                ease: "easeOut",
+              }}
+              viewport={{ once: true }}
               className="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition"
             >
               <div className="flex justify-center mb-4">{product.icon}</div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">
                 {product.name}
               </h3>
-              <p className="text-gray-600 text-sm mb-4">{product.description}</p>
+              <p className="text-gray-600 text-sm mb-4">
+                {product.description}
+              </p>
               <ul className="text-gray-700 text-sm mb-4 text-left list-disc list-inside">
                 {product.usp.map((point) => (
                   <li key={point}>{point}</li>

@@ -27,14 +27,15 @@ const IndustryUseCases = () => {
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           className="text-4xl font-bold text-gray-900 mb-6"
         >
           Industry Use Cases
         </motion.h2>
 
         <p className="text-gray-600 mb-12">
-          Our APIs empower organizations across sectors to automate, scale, and innovate faster.
+          Our APIs empower organizations across sectors to automate, scale, and
+          innovate faster.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -44,7 +45,7 @@ const IndustryUseCases = () => {
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
-              viewport={{ once: false, amount: 0.3 }}
+              viewport={{ once: true }}
               className="bg-white p-8 rounded-2xl shadow-md hover:shadow-lg transition"
             >
               <div className="flex justify-center">{useCase.icon}</div>

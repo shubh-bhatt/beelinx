@@ -41,7 +41,7 @@ const Testimonials = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.2 }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
               className="bg-gray-50 p-8 rounded-2xl shadow-md text-left"
             >
               <FaQuoteLeft className="text-[#4CB4FB] text-2xl mb-3" />

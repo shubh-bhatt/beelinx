@@ -4,11 +4,10 @@ const SolutionSegments = () => {
   return (
     <section className="bg-gray-50 py-24 px-6 md:px-16 lg:px-32 w-full">
       <div className="text-center max-w-6xl mx-auto">
-        
         <motion.h2
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.3 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="font-bold mb-16 text-5xl text-gray-700"
         >
@@ -53,9 +52,9 @@ const SolutionSegments = () => {
               key={index}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false, amount: 0.3 }}
+              viewport={{ once: true }}
               transition={{ delay: index * 0.2, duration: 0.7 }}
-              className="bg-white shadow-lg rounded-2xl text-gray-700 p-8 border border-gray-200 hover:shadow-2xl transition-all flex flex-col justify-between h-[450px]" 
+              className="bg-white shadow-lg rounded-2xl text-gray-700 p-8 border border-gray-200 hover:shadow-2xl transition-all flex flex-col justify-between h-[450px]"
             >
               <div>
                 <h3 className="text-2xl font-semibold mb-6">{item.title}</h3>

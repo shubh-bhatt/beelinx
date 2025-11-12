@@ -23,7 +23,7 @@ import {
 } from "lucide-react";
 
 export default function ProductMegaMenu() {
-  const iconClass = "inline-block mr-3 h-5 w-5 text-sky-600";
+  const iconClass = "inline-block mr-1 h-6 w-6 text-sky-600";
 
   return (
     <div className="w-[1250px] bg-white shadow-2xl rounded-xl p-6 grid grid-cols-5 gap-8 text-gray-800">

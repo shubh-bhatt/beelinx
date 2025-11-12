@@ -49,7 +49,8 @@ const CaseStudies = () => {
           viewport={{ once: true }}
           className="text-gray-600"
         >
-          Real-world success stories showcasing how our platform transforms operations across sectors.
+          Real-world success stories showcasing how our platform transforms
+          operations across sectors.
         </motion.p>
       </div>
 

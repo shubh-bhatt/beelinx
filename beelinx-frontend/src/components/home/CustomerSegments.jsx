@@ -53,7 +53,7 @@ const CustomerSegments = () => {
               variants={cardVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: false }}
+              viewport={{ once: true }}
               custom={index}
               whileHover={{ y: -8, scale: 1.03 }}
             >
