@@ -18,7 +18,7 @@ const ComplienceAndRegulatory = () => {
     'Data Protection Standards'
   ];
   return (
-    <section className="py-20 px-6 bg-linear-to-br from-sky-50 to-emerald-50">
+    <section className="py-10 px-6 bg-linear-to-br from-sky-50 to-emerald-50">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Compliance & Regulatory Associations</h2>
