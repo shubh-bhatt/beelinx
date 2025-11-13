@@ -1,19 +1,9 @@
-import {
-  Check,
-  ArrowRight,
-  Code,
-  Shield,
-  Zap,
-  Users,
-  Building2,
-  Landmark,
-  ChevronDown,
-  ChevronUp,
-} from "lucide-react";
+import { Check, ArrowRight, Code, Zap } from "lucide-react";
+import CountUp from "react-countup";
 
 const DetailsHeroSection = () => {
   return (
-    <section className="pt-32  px-6 relative overflow-hidden">
+    <section className="pt-32 px-6 relative overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
@@ -87,13 +77,22 @@ const DetailsHeroSection = () => {
               <div className="grid grid-cols-2 gap-4 mb-6">
                 <div className="bg-blue-50 rounded-xl p-4">
                   <p className="text-sm text-gray-600 mb-1">Total Payments</p>
-                  <p className="text-2xl font-bold text-gray-900">₹24.5L</p>
-                  <p className="text-xs text-green-600 mt-1">↑ 12% this week</p>
+                  <p className="text-2xl font-bold text-gray-900">
+                    ₹<CountUp end={2450000} duration={2.5} separator="," />
+                  </p>
+                  <p className="text-xs text-green-600 mt-1">
+                    ↑ <CountUp end={12} duration={2} />% this week
+                  </p>
                 </div>
+
                 <div className="bg-green-50 rounded-xl p-4">
                   <p className="text-sm text-gray-600 mb-1">Active VAs</p>
-                  <p className="text-2xl font-bold text-gray-900">1,248</p>
-                  <p className="text-xs text-green-600 mt-1">↑ 8% this week</p>
+                  <p className="text-2xl font-bold text-gray-900">
+                    <CountUp end={1248} duration={2.5} />
+                  </p>
+                  <p className="text-xs text-green-600 mt-1">
+                    ↑ <CountUp end={8} duration={2} />% this week
+                  </p>
                 </div>
               </div>
 
@@ -112,7 +111,9 @@ const DetailsHeroSection = () => {
                     </div>
                   </div>
                   <div className="text-right">
-                    <p className="text-sm font-bold text-gray-900">₹15,000</p>
+                    <p className="text-sm font-bold text-gray-900">
+                      ₹<CountUp end={15000} duration={1.5} separator="," />
+                    </p>
                     <p className="text-xs text-gray-500">2m ago</p>
                   </div>
                 </div>
@@ -130,40 +131,17 @@ const DetailsHeroSection = () => {
                     </div>
                   </div>
                   <div className="text-right">
-                    <p className="text-sm font-bold text-gray-900">₹8,500</p>
+                    <p className="text-sm font-bold text-gray-900">
+                      ₹<CountUp end={8500} duration={1.5} separator="," />
+                    </p>
                     <p className="text-xs text-gray-500">5m ago</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
-                  <div className="flex items-center">
-                    <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center mr-3">
-                      <Zap className="w-5 h-5 text-white" />
-                    </div>
-                    <div>
-                      <p className="text-sm font-semibold text-gray-900">
-                        VA Created
-                      </p>
-                      <p className="text-xs text-gray-500">VA-2024-001236</p>
-                    </div>
-                  </div>
-                  <div className="text-right">
-                    <p className="text-sm font-bold text-gray-900">Active</p>
-                    <p className="text-xs text-gray-500">8m ago</p>
                   </div>
                 </div>
               </div>
             </div>
-
-            {/* Floating Elements */}
-            <div className="absolute -top-6 -right-6 w-24 h-24 bg-blue-200 rounded-full blur-3xl opacity-50"></div>
-            <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-blue-300 rounded-full blur-3xl opacity-30"></div>
           </div>
         </div>
       </div>
-
-      {/* Background Decoration */}
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-linear-to-l from-blue-100 to-transparent opacity-30 -z-10"></div>
     </section>
   );
 };

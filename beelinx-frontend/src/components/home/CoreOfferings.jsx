@@ -32,35 +32,61 @@ const CoreOfferings = () => {
     },
   ];
 
+  // Parent section animation (smooth stagger)
+  const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.25,
+      },
+    },
+  };
+
+  // Card animation (fade up)
   const cardVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: (i) => ({
+    hidden: { opacity: 0, y: 60 },
+    visible: {
       opacity: 1,
       y: 0,
-      transition: { delay: i * 0.2, duration: 0.6, ease: "easeOut" },
-    }),
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
   };
 
   return (
     <section className="py-20 bg-gray-50 overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 text-center">
-        <h2 className="text-4xl font-bold text-gray-800 mb-4">
+        <motion.h2
+          className="text-4xl font-bold text-gray-800 mb-4"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
           Core Offerings
-        </h2>
-        <p className="text-xl font-semibold text-gray-600 mb-12  tracking-wide">
-          What We Do
-        </p>
+        </motion.h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <motion.p
+          className="text-xl font-semibold text-gray-600 mb-12 tracking-wide"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.2, duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          What We Do
+        </motion.p>
+
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+        >
           {offerings.map((item, index) => (
             <motion.div
               key={index}
               className="relative p-8 bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500 group"
               variants={cardVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              custom={index}
               whileHover={{ y: -10, scale: 1.05 }}
             >
               <div className="flex justify-center mb-4">{item.icon}</div>
@@ -69,6 +95,7 @@ const CoreOfferings = () => {
               </h3>
               <p className="text-gray-600">{item.description}</p>
 
+              {/* Hover detail overlay */}
               <motion.div
                 className="absolute inset-0 bg-white bg-opacity-95 rounded-2xl flex flex-col items-center justify-center px-6 text-gray-700 text-sm opacity-0 group-hover:opacity-100 transition-all duration-500"
                 initial={{ scale: 0.9 }}
@@ -78,7 +105,7 @@ const CoreOfferings = () => {
               </motion.div>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -26,47 +26,56 @@ const AboutStory = () => {
       desc: "Expanded services across all Indian states",
     },
   ];
+
   return (
-    <div>
-      <section className="py-20 px-6">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">
-            Our Story
-          </h2>
-          <div className="relative">
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-200"></div>
-            {timeline.map((item, idx) => (
+    <section className="py-20 px-4 sm:px-6">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">
+          Our Story
+        </h2>
+
+        <div className="relative">
+          {/* Center Line */}
+          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-200 hidden md:block"></div>
+
+          {timeline.map((item, idx) => (
+            <div
+              key={idx}
+              className={`flex flex-col md:flex-row items-center mb-12 ${
+                idx % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+              }`}
+            >
+              {/* Timeline content */}
               <div
-                key={idx}
-                className={`flex items-center mb-12 ${
-                  idx % 2 === 0 ? "flex-row" : "flex-row-reverse"
+                className={`w-full md:w-5/12 ${
+                  idx % 2 === 0
+                    ? "md:text-right md:pr-8 text-center"
+                    : "md:text-left md:pl-8 text-center"
                 }`}
               >
-                <div
-                  className={`w-5/12 ${
-                    idx % 2 === 0 ? "text-right pr-8" : "text-left pl-8"
-                  }`}
-                >
-                  <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                    <span className="text-2xl font-bold text-blue-600">
-                      {item.year}
-                    </span>
-                    <h3 className="text-xl font-semibold text-gray-900 mt-2 mb-2">
-                      {item.event}
-                    </h3>
-                    <p className="text-gray-600">{item.desc}</p>
-                  </div>
+                <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow mx-auto">
+                  <span className="text-2xl font-bold text-blue-600">
+                    {item.year}
+                  </span>
+                  <h3 className="text-xl font-semibold text-gray-900 mt-2 mb-2">
+                    {item.event}
+                  </h3>
+                  <p className="text-gray-600">{item.desc}</p>
                 </div>
-                <div className="w-2/12 flex justify-center">
-                  <div className="w-4 h-4 bg-blue-600 rounded-full border-4 border-white shadow-lg"></div>
-                </div>
-                <div className="w-5/12"></div>
               </div>
-            ))}
-          </div>
+
+              {/* Timeline dot */}
+              <div className="hidden md:flex w-2/12 justify-center">
+                <div className="w-4 h-4 bg-blue-600 rounded-full border-4 border-white shadow-lg"></div>
+              </div>
+
+              {/* Empty space for alignment (desktop only) */}
+              <div className="hidden md:block w-5/12"></div>
+            </div>
+          ))}
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 };
 
