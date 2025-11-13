@@ -39,7 +39,7 @@ const WhyChooseUs = () => {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          Why Choose <span className="text-[#4CB4FB]">Beelinix?</span>
+          Why Choose <span className="text-[#4CB4FB]">Beelinx?</span>
         </motion.h2>
 
         <motion.p
@@ -62,7 +62,7 @@ const WhyChooseUs = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.15 }}
               whileHover={{ scale: 1.03 }}
-              viewport={{ once: true }} 
+              viewport={{ once: true }}
             >
               <div className="flex justify-center mb-4">{usp.icon}</div>
               <h3 className="text-xl font-semibold text-gray-800 mb-2">
