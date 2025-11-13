@@ -70,10 +70,6 @@ export default function Footer() {
               <li>
                 <Link to="/about">About Us </Link>
               </li>
-
-              <li>
-                <Link to="/">Customers </Link>
-              </li>
               <li>
                 <Link to="/">Careers </Link>
               </li>
