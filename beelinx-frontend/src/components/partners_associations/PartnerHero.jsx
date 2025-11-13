@@ -1,34 +1,38 @@
 import React from "react";
+import HDFC from "/logos/herohdfclogo.png" 
+import NPCI from "/logos/heronpcilogo.webp" 
+import RBI from "/logos/Reserve_Bank_of_India_logo.svg.png" 
+import AWS from "/logos/heroAWS-Logo-PNG.png" 
+import Azure from "/logos/heroMicrosoft_Azure_Logo.svg" 
+import  NASSCOM from "/logos/Nasscom.svg" 
 
 const PartnerHero = () => {
   return (
     <div>
-      <section className="bg-linear-to-br from-emerald-50 via-white to-sky-50 mt-32 py-10 px-6">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl font-bold text-gray-900 mb-4">
+      <section className="bg-linear-to-br from-emerald-50 via-white to-sky-50 mt-10 py-10 px-6">
+        <div className="max-w-7xl mx-auto text-center py-20">
+          <h1 className="text-5xl font-bold  leading-14 text-gray-900 mb-4">
             Trusted by Leading Banks, Gateways, and Institutions
           </h1>
-          <p className="text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 mb-10 max-w-3xl mx-auto">
             Our network of partners powers secure, compliant, and scalable
             fintech solutions across India.
           </p>
 
           {/* Logo Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 mb-12 max-w-5xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 mb-5 max-w-5xl mx-auto">
             {[
-              "HDFC",
-              "ICICI",
-              "NPCI",
-              "RBI",
-              "AWS",
-              "Azure",
-              "Zoho",
-              "NASSCOM",
+              HDFC,
+              NPCI,
+              RBI,
+              AWS,
+              Azure,
+              NASSCOM,
             ].map((logo, idx) => (
               <div
                 key={idx}
-                className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow flex items-center justify-center">
-                <span className="text-gray-700 font-semibold">{logo}</span>
+                className="bg-white rounded-lg p-3   transition-shadow flex items-center justify-center">
+                <img className="text-gray-700 font-semibold" src={logo}></img>
               </div>
             ))}
           </div>
