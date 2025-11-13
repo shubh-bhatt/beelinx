@@ -18,7 +18,7 @@ import {
 
 export default function DeveloperAPIPage() {
   return (
-    <div className=" bg-linear-to-br from-slate-950 via-slate-900 to-slate-950 text-white mt-20">
+    <div className=" bg-linear-to-br from-slate-950 via-slate-900 to-slate-950 text-white mt-18">
       {/* Hero Section */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-linear-to-r from-blue-600/10 via-purple-600/10 to-pink-600/10"></div>
