@@ -65,7 +65,7 @@ const Navbar = () => {
         </nav>
 
         {/* 🔵 Request Demo Button */}
-        <button className="hidden md:block bg-[#4CB4FB] text-white px-5 py-2 rounded-full font-semibold hover:bg-sky-500 transition">
+        <button className="hidden md:block bg-red-200 text-white px-5 py-2 rounded-full font-semibold hover:bg-sky-500 transition">
           Request Demo
         </button>
 
